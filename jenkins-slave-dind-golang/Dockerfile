@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV GOLANG_VERSION 1.9.2
 
+ADD ./go ./go
+
 RUN tar -C /usr/local -xzf "./go/go$GOLANG_VERSION.linux-amd64.tar.gz" \
   && rm -rf ./go
 
